@@ -1,5 +1,5 @@
-import cowsay
 import sys
+
 # import from saying.py
 from saying import hello
 

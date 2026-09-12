@@ -46,11 +46,19 @@ Unless explicitly noted otherwise, all variables are read-only
 
 ## Packages
 
-Package repository : PyPi
+Package repository : PyPi（外部パッケージ管理サイト）
+pip : package installer for Pythonでインストールする（pip install ~）
 
-### pip : package installer for Python
+### Package structure
 
-pip install ~
+package dir
+
+- **init**.py
+- module (~.py)
+- module (~.py)
+- ...
+
+**init**.pyはそのディレクトリをパッケージとして定義し、初期化処理を行うファイル
 
 ## APIs : Application Programming Interface
 
@@ -77,3 +85,47 @@ API通信時に受信する情報
   Content-Type（データ形式）やサーバ情報などの付加情報
 - response body
   クライアントに返す実データ（JSONなど）
+
+## random module
+
+擬似乱数を生成する標準モジュール
+
+random.seed()
+擬似乱数の開始状態を設定する関数
+
+通常、seedを設定しないrandom関数では実行のたびに異なる乱数を出力する。
+一方seedの値を設定（固定）すれば、何度実行しても同じ乱数を生成する。
+
+random.seed(42)
+print(random.choices(cards, k=2))　→ [jack, queen]
+print(random.choices(cards, k=2))　→ [king, queen]
+
+↑を実行した結果は、その後再度↓を実行した結果と同じ（再現性がある）
+seed設定しないと上下は異なる出力となる（再現性はない）
+
+random.seed(42)
+print(random.choices(cards, k=2)) → [jack, queen]
+print(random.choices(cards, k=2)) → [king, queen]
+
+## style
+
+### PEP8
+
+pythonのコーディング（スタイル）規約
+
+- インデント
+- １行の文字数
+- 空白
+- インポート順序
+- 変数、関数、クラス、定数の命名規則
+- ...
+
+### pylint
+
+pythonコードの構文エラーや規約違反、バグの可能性などを検出するコード解析ツール
+コードを実行せずに不適切な箇所がないか解析する
+
+### Ruffをvscodeに導入
+
+Rust製で高速に動作するpython向けの次世代リンタおよびコードフォーマッタ
+伝統的なものはBlack
