@@ -14,9 +14,9 @@
 | 1   | Conditionals                | ✅ 完了   |
 | 2   | Loops                       | ✅ 完了   |
 | 3   | Exceptions                  | ✅ 完了   |
-| 4   | Libraries                   | 🚧 進行中 |
-| 5   | unit Tests                  | ⬜ 未着手 |
-| 6   | File I/O                    | ⬜ 未着手 |
+| 4   | Libraries                   | ✅ 完了   |
+| 5   | unit Tests                  | ✅ 完了   |
+| 6   | File I/O                    | 🚧 進行中 |
 | 7   | Regular Expressions         | ⬜ 未着手 |
 | 8   | Object-Oriented Programming | ⬜ 未着手 |
 | 9   | Et Cetera                   | ⬜ 未着手 |
